@@ -5,21 +5,31 @@ var gulp = require("gulp"),
     rimraf = require("rimraf"),
     concat = require("gulp-concat"),
     cssmin = require("gulp-cssmin"),
-    uglify = require("gulp-uglify");
+    jsmin = require("gulp-jsmin"),
+    uglify = require("gulp-uglify"), 
+    mainBowerFiles = require('gulp-main-bower-files'),
+    flatten = require('gulp-flatten'),
+    debug = require("gulp-debug");
 
 var paths = {
     webroot: "./wwwroot/"
 };
 
-paths.js = paths.webroot + "js/**/*.js";
-paths.minJs = paths.webroot + "js/**/*.min.js";
+paths.distFolder = paths.webroot + "dist/";
+paths.jsApp = [paths.webroot + "**/*.js",  "!" + paths.webroot + "lib/**/*.js", "!**/*-bak.js", "!" + paths.distFolder + "**/*.js", "!**/_*.js"];
+paths.jsVendor = [paths.webroot + "lib/**/*.js", , "!*-bak.js"];
+paths.jsVendorBower =  "./bower.json";
+
+
+paths.distJsApp = paths.distFolder + "app.js";
+paths.distJsVendor = paths.distFolder + "vendor.js";
+
 paths.css = paths.webroot + "css/**/*.css";
 paths.minCss = paths.webroot + "css/**/*.min.css";
-paths.concatJsDest = paths.webroot + "js/site.min.js";
 paths.concatCssDest = paths.webroot + "css/site.min.css";
 
 gulp.task("clean:js", function (cb) {
-    rimraf(paths.concatJsDest, cb);
+    rimraf([paths.distFolder, paths.webroot + "lib-main"], cb);
 });
 
 gulp.task("clean:css", function (cb) {
@@ -28,12 +38,38 @@ gulp.task("clean:css", function (cb) {
 
 gulp.task("clean", ["clean:js", "clean:css"]);
 
-gulp.task("min:js", function () {
+
+
+gulp.task("min:js-app", function () {
+    return gulp.src(paths.jsApp, { base: "." })
+        .pipe(debug())
+        .pipe(concat(paths.distJsApp))
+        .pipe(jsmin())
+        .pipe(gulp.dest("."));
+});
+
+gulp.task("min:js-vendor", function () {
+    return gulp.src('./bower.json')
+        .pipe(mainBowerFiles())
+        .pipe(debug())
+        .pipe(flatten())
+        .pipe(gulp.dest(paths.webroot+"lib-main"))
+        .pipe(concat(paths.distJsVendor))
+        .pipe(jsmin())
+        .pipe(gulp.dest("."))
+});
+ 
+
+
+gulp.task("min:js", ["min:js-app", "min:js-vendor"]);
+
+gulp.task("min:js-old", function () {
     return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
         .pipe(concat(paths.concatJsDest))
         .pipe(uglify())
         .pipe(gulp.dest("."));
 });
+
 
 gulp.task("min:css", function () {
     return gulp.src([paths.css, "!" + paths.minCss])
