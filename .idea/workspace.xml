@@ -2,24 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fd19b27-4834-426c-b6c9-523b641159b8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/cleancss.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/cleancss.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/dateformat.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/dateformat.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/gulp.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/gulp.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/has-ansi.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/has-ansi.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/mkdirp.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/mkdirp.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/semver.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/semver.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/strip-ansi.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/strip-ansi.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/strip-indent.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/strip-indent.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/strip-json-comments.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/strip-json-comments.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/supports-color.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/supports-color.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/uglifyjs.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/uglifyjs.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/user-home.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/.bin/user-home.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/CHANGELOG.md" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/CHANGELOG.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/index.js" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/lib/completion.js" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/lib/completion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/lib/taskTree.js" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/lib/taskTree.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/package.json" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/gulp/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/node_modules/main-bower-files/node_modules/.bin/strip-bom.cmd" afterPath="$PROJECT_DIR$/src/TodolistService/node_modules/main-bower-files/node_modules/.bin/strip-bom.cmd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/TodolistService/package.json" afterPath="$PROJECT_DIR$/src/TodolistService/package.json" />
     </list>
     <ignored path="TodolistService.iws" />
@@ -41,11 +23,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TodolistService/node_modules/gulp/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rimraf.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TodolistService/node_modules/rimraf/rimraf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="87" column="10" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -217,6 +209,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
+  <component name="RunManager">
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -261,6 +258,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TodolistService/node_modules/rimraf/rimraf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="87" column="10" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
           <folding />
         </state>
       </provider>
