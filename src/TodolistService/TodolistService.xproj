@@ -5,6 +5,7 @@
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.Props" Condition="'$(VSToolsPath)' != ''" />
+
   <PropertyGroup Label="Globals">
     <ProjectGuid>130fa61c-6cd0-4e88-9b3c-e7e058780f84</ProjectGuid>
     <RootNamespace>TodolistService</RootNamespace>
@@ -20,4 +21,28 @@
     <DnxInvisibleContent Include="package.json" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
+<Target Name="Build" DependsOnTargets="$(BuildDependsOn)"/>
+
+<PropertyGroup>
+
+    <BuildDependsOn>
+
+        $(BuildDependsOn);
+
+        GulpBuild
+
+    </BuildDependsOn>
+
+</PropertyGroup>
+
+ 
+<!--PropertyGroup>
+  <CompileDependsOn>
+    $(CompileDependsOn);
+    GulpBuild;
+  </CompileDependsOn>
+</PropertyGroup-->
+<Target Name="GulpBuild">
+  <Exec Command="gulp min:js" />
+</Target>
 </Project>

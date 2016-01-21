@@ -171,9 +171,7 @@ ClientBin/
 *.dbproj.schemaview
 *.pfx
 *.publishsettings
-node_modules/
 orleans.codegen.cs
-bower_components/
 
 # RIA/Silverlight projects
 Generated_Code/
@@ -211,3 +209,6 @@ FakesAssemblies/
 GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
+
+dist
+lib-main

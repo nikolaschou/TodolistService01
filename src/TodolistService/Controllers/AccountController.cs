@@ -23,6 +23,7 @@ namespace TodolistService.Controllers
         private readonly IEmailSender _emailSender;
         private readonly ISmsSender _smsSender;
         private readonly ILogger _logger;
+        private int x = 1;
 
         public AccountController(
             UserManager<ApplicationUser> userManager,
