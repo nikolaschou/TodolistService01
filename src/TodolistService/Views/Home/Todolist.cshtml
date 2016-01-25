@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Todolist";
+}
+
+<div class="col-md-12" ng-controller="TodolistCtrl as todolist" >
+    <h2>My todos</h2>
+    <div ng-repeat="td in todolist.todos" ng-hide="td.done" class="todo-item">
+        <input type="checkbox" ng-model="td.done">
+        <div class="todo-title"><input type="text" ng-class="td.done?'done':''" ng-model="td.title" /></div>
+    </div>
+    <form name="myform" ng-submit="todoAdder.submit(todolist)" ng-controller="TodoAdderCtrl as todoAdder">
+        <div class="todo-item">
+            <input type="checkbox" disabled="disabled">
+            <div class="todo-title"><input type="text" ng-model="todoAdder.todo.title" placeholder="...add new todo..." /></div>
+        </div>
+
+    </form>
+</div>

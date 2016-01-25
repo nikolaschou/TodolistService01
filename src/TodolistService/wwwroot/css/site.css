@@ -32,3 +32,27 @@ textarea {
         z-index: 10 !important;
     }
 }
+
+
+div.todo-title input  {
+  border:0;
+  width:100%;
+}
+
+div.todo-title input.done  {
+  text-decoration:line-through;
+}
+div.todo-title {
+  display:inline-block;
+  width:80%;
+  border-bottom:1px solid lightgrey;
+}
+div.todo-item {
+  white-space: nowrap;
+  margin-top:1em;
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+}
+div.todo-item.ng-hide {
+  opacity:0;
+}

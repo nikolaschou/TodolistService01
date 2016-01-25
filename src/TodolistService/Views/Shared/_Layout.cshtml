@@ -16,7 +16,7 @@
             <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         </environment>
     </head>
-    <body>
+    <body ng-app="TodolistModule">
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -33,6 +33,7 @@
                         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                         <li><a asp-controller="Home" asp-action="About">About</a></li>
                         <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
+                        <li><a asp-controller="Home" asp-action="TodoList">Todolist</a></li>
                     </ul>
                     @await Html.PartialAsync("_LoginPartial")
                 </div>
@@ -47,13 +48,24 @@
         </div>
 
         <environment names="Development">
-            @foreach (var file in System.IO.Directory.GetFiles("./lib-main"))
-            {
-                <script src="@(file )"></script>
-            }
+            <script src="/./lib-main/jquery.js"></script>
+            <script src="/./lib-main/jquery.validate.js"></script>
+            <script src="/./lib-main/jquery.validate.unobtrusive.js"></script>
+            
+            <script src="/./lib-main/angular.js"></script>
+            <script src="/./lib-main/bootstrap.js"></script>
+
+            <script src="/./lib-main/angular-animate.js"></script>
+            <script src="/./lib-main/angular-cookies.js"></script>
+            <script src="/./lib-main/angular-messages.js"></script>
+            <script src="/./lib-main/angular-resource.js"></script>
+            <script src="/./lib-main/angular-route.js"></script>
+            <script src="/./lib-main/angular-sanitize.js"></script>
+            <script src="/./lib-main/angular-touch.js"></script>
+            
             @foreach (var file in System.IO.Directory.GetFiles("./js"))
             {
-                <script src="@( file )"></script>
+                <script src='@("/"+file.Replace("\\","/") )'></script>
             }
         </environment>
         <environment names="Staging,Production">

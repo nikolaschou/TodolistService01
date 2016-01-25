@@ -27,6 +27,12 @@ namespace TodolistService.Controllers
             return View();
         }
 
+        public IActionResult Todolist()
+        {
+
+            return View();
+        }
+
         public IActionResult Error()
         {
             return View();
